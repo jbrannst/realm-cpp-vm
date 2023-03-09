@@ -55,11 +55,12 @@ EOF
 # cp bin/SimRunner.jar ~
 # EOF
 
-# echo "Public DNS is $PUBDNS; Public IP is $PUBIP; Add it to IP access list"
 echo "---------------------------------------------------------------------------------------------------"
 echo "We're ready! To start, run:"
 echo "docker run mongo-cpp-iot"
 echo "---------------------------------------------------------------------------------------------------"
+echo "Logging in to VM at"
+echo "ssh -i $KEYPATH -oStrictHostKeyChecking=no ec2-user@$PUBDNS"
 ssh -i $KEYPATH -oStrictHostKeyChecking=no ec2-user@$PUBDNS
 
 # below this line is a convenience for Johannes

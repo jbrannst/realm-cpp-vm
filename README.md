@@ -5,27 +5,26 @@ Pre-reqs:
 1. Have an Atlas account and a cluster running, blank M10 is fine
 2. Active programmatic key from the AWS console login, or AWS-SSO (recommended)
 3. Target eu-west-1 (using .aws/credentials)
-4. Update config.sh
-5. Launch VM
+4. Create a default "Device Sync" App Service. Enable "Development Mode" and set Permissions to "Users can read and write all data" 
+5. Update config.sh
+6. Launch VM
 ```
 ./launch-vm-sso.sh
 ```
-6. Update hardcoded app services APP_ID to yours
-```
-cd cpprealm-docker
-vi cpp-example/main.cpp
-```
-7. build using docker
-```
-docker build -t mongo-cpp-iot -f iot.Dockerfile .
-```
-8. run
+7. run the C++ SDK with docker
 ```
 docker run mongo-cpp-iot
 ```
-9. start consumer.py in a different tab
+8. start consumer.py in a different tab to watch messages arrive in Atlas
 ```
 python3 consumer.py
 ```
-10. Watch the messages arrive, then block internet access
+8. Block internet access, messages created but not arriving in Atlas
+```
+./block-outgoing.sh
+```
+9. Reenable internet access, watch messages pour in
+```
+./open-outgoing.sh
+```
 
