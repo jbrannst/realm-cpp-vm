@@ -1,0 +1,11 @@
+KEYNAME=johannes.brannstrom
+KEYPATH=~/.ssh/johannesbrannstrom.pem
+SECGROUP=sg-051ea85d424a7725a
+SECGROUP_BLOCKED=sg-00af40f495945c89f
+IMAGE=ami-095ca30e16a1f8855
+NAMETAG=johannes-device-sync
+OWNERTAG=johannes.brannstrom
+INSTTYPE=t3.large
+EXPIRE_ON=2023-03-10
+SSO_PROFILE=sa-sso
+APP_ID=vas-synk-tukfp
