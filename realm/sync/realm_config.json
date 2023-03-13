@@ -1,0 +1,7 @@
+{
+    "config_version": 20210101,
+    "app_id": "sync-cmdxg",
+    "name": "sync",
+    "location": "IE",
+    "deployment_model": "LOCAL"
+}

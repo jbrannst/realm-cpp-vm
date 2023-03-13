@@ -1,0 +1,41 @@
+{
+    "bsonType": "object",
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "cycle_end": {
+            "bsonType": "date"
+        },
+        "cycle_id": {
+            "bsonType": "long"
+        },
+        "cycle_start": {
+            "bsonType": "date"
+        },
+        "dumping_spot": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "double"
+            }
+        },
+        "machine_id": {
+            "bsonType": "long"
+        },
+        "material_type": {
+            "bsonType": "string"
+        },
+        "owner_id": {
+            "bsonType": "long"
+        },
+        "pay_load": {
+            "bsonType": "long"
+        }
+    },
+    "required": [
+        "_id",
+        "owner_id",
+        "machine_id"
+    ],
+    "title": "IoTObject"
+}
